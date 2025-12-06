@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bank Portal</title>
+  <style>
+    :root { --navy: #1a3c6c; --accent: #5b7cff; }
+    html, body { height: 100%; margin: 0; background: linear-gradient(135deg, var(--navy), #2e5a9a); font-family: Inter, Segoe UI, Arial; display: flex; justify-content: center; align-items: center; }
+    .container { text-align: center; background: white; padding: 60px 40px; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 500px; }
+    h1 { color: var(--navy); font-size: 36px; margin-bottom: 20px; }
+    p { color: #666; font-size: 16px; margin-bottom: 40px; }
+    .logo { height: 80px; margin-bottom: 30px; object-fit: contain; }
+    .btn { padding: 14px 40px; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-primary:hover { background: #4567e8; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(91,124,255,0.3); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='bank_zoom.png') }}" alt="Bank Logo" class="logo" onerror="this.style.display='none'">
+    <h1>Welcome to Bank Portal</h1>
+    <p>Secure banking at your fingertips. Choose your role to continue.</p>
+    <a href="{{ url_for('select_role') }}" class="btn btn-primary">Login / Register</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Select Role</title>
+  <style>
+    :root { --navy: #1a3c6c; --accent: #5b7cff; }
+    html, body { height: 100%; margin: 0; background: linear-gradient(135deg, var(--navy), #2e5a9a); font-family: Inter, Segoe UI, Arial; display: flex; justify-content: center; align-items: center; }
+    .container { text-align: center; background: white; padding: 60px 40px; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 500px; }
+    h1 { color: var(--navy); font-size: 32px; margin-bottom: 10px; }
+    .subtitle { color: #666; margin-bottom: 40px; }
+    .buttons { display: flex; flex-direction: column; gap: 15px; }
+    .btn { padding: 14px 40px; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+    .btn-user { background: var(--accent); color: white; }
+    .btn-user:hover { background: #4567e8; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(91,124,255,0.3); }
+    .btn-admin { background: #FF6B6B; color: white; }
+    .btn-admin:hover { background: #ee5a52; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255,107,107,0.3); }
+    .back { margin-top: 20px; }
+    .back a { color: var(--accent); text-decoration: none; font-size: 14px; }
+    .back a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Role</h1>
+    <p class="subtitle">Choose how you want to access the portal</p>
+    <div class="buttons">
+      <a href="{{ url_for('user_login') }}" class="btn btn-user">👤 User Login</a>
+      <a href="{{ url_for('admin_login') }}" class="btn btn-admin">🔐 Admin Login</a>
+    </div>
+    <div class="back">
+      <a href="{{ url_for('home') }}">← Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>

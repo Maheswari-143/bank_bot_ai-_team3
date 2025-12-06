@@ -1,0 +1,55 @@
+{
+  "intents": [
+    {
+      "intent": "check_balance",
+      "examples": [
+        "what is my balance",
+        "show my balance"
+      ]
+    },
+    {
+      "intent": "transfer_money",
+      "examples": [
+        "transfer money",
+        "send money"
+      ]
+    },
+    {
+      "intent": "personal_loan_info",
+      "examples": [
+        "tell me about personal loan",
+        "what is a personal loan",
+        "personal loan details",
+        "explain personal loan",
+        "information about personal loan"
+      ]
+    },
+    {
+      "intent": "card_option",
+      "examples": [
+        "cards",
+        "what cards do you have",
+        "show card options",
+        "types of cards",
+        "card details"
+      ]
+    },
+    {
+      "intent": "view_transactions",
+      "examples": [
+        "show my transactions",
+        "recent transactions please",
+        "view my transaction history",
+        "show last transactions",
+        "transaction details"
+      ]
+    },
+    {
+      "intent": "loan",
+      "examples": [
+        "education loan",
+        "details about loans"
+      ]
+    }
+  ]
+}
